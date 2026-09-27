@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rich Text to HTML</title>
+  </head>
+  <body>
+    <main>
+      <h1>Rich Text to HTML</h1>
+      <p class="subtitle">Paste formatted text below and get clean HTML markup instantly.</p>
+
+      <section>
+        <label for="paste-box">Rich text</label>
+        <div class="output-wrap">
+          <div id="paste-box" contentEditable="true" tabIndex="-1" data-placeholder="Paste rich text here!"></div>
+          <button id="paste-btn" class="icon-btn" type="button" title="Paste from clipboard" aria-label="Paste from clipboard">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="8" y="2" width="8" height="4" rx="1"></rect>
+              <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <section>
+        <label for="html-output">HTML output</label>
+        <div class="output-wrap">
+          <textarea id="html-output" spellcheck="false" placeholder="Your HTML will appear here"></textarea>
+          <button id="copy-btn" class="icon-btn" type="button" title="Copy to clipboard" aria-label="Copy to clipboard">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="12" height="12" rx="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+          </button>
+        </div>
+      </section>
+    </main>
+    <div id="toast" role="status" aria-live="polite">Copied!</div>
+    <script src="./script.js"></script>
+  </body>
+</html>
